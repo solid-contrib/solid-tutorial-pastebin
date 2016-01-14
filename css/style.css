@@ -1,0 +1,96 @@
+html, body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 200;
+  height: 100%;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: #3D92C9;
+}
+a:hover,
+a:focus {
+    text-decoration: underline;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+input {
+  font-size: 1.3em;
+  font-family: 'Roboto', sans-serif;
+  width: 90%;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+textarea {
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  width: 90%;
+  height: 300px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 90%;
+  background-color: #fff;
+  color: #777;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 60%;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  border: 1px solid #777;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.float-right {
+    float: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hidden {
+    display: none!important;
+}
+
+.content {
+  /*height: 100%;*/
+}
+
+footer {
+  margin-top: 20px;
+  padding-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (min-width: 48em) {
+
+}
+
+@media (max-width: 48em) {
+    body {
+        zoom: 80%;
+    }
+}
