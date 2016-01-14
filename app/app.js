@@ -21,7 +21,8 @@ Pastebin = (function () {
     };
 
     // Default publish location
-    var defaultURL = 'https://deiu.me/Public/bins/';
+    // ATTENTION: this variable must be set for the app to create new bins
+    var defaultURL = '';
 
     function init() {
         if (queryVals['view'] && queryVals['view'].length > 0) {
