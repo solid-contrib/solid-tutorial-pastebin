@@ -18,7 +18,7 @@ Pastebin = (function () {
 
     // Default publish location
     // ATTENTION: this variable must be set for the app to create new bins
-    var defaultURL = '';
+    var defaultContainer = '';
 
     function init() {
         if (queryVals['view'] && queryVals['view'].length > 0) {
@@ -72,7 +72,7 @@ Pastebin = (function () {
         g.add($rdf.sym(''), SIOC('content'), bin.body);
         var data = new $rdf.Serializer(g).toN3(g);
 
-        Solid.web.post(defaultURL, undefined, data).then(function(meta) {
+        Solid.web.post(defaultContainer, undefined, data).then(function(meta) {
             // view
             window.location.search = "?view="+encodeURIComponent(meta.url);
         }).catch(function(err) {
