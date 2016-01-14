@@ -2,12 +2,8 @@ var Pastebin = Pastebin || {};
 
 Pastebin = (function () {
     'use strict';
-    // RDF
-    var PROXY = "https://databox.me/,proxy?uri={uri}";
-    var TIMEOUT = 5000;
 
-    $rdf.Fetcher.crossSiteProxyTemplate = PROXY;
-    // common vocabs
+    // common RDF vocabs
     var RDF = $rdf.Namespace("http://www.w3.org/1999/02/22-rdf-syntax-ns#");
     var DCT = $rdf.Namespace("http://purl.org/dc/terms/");
     var SIOC = $rdf.Namespace("http://rdfs.org/sioc/ns#");
