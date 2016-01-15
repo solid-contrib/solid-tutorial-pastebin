@@ -31,7 +31,7 @@ Pastebin = (function () {
         }
     }
 
-    function loadBin (url, edit) {
+    function loadBin (url, showEditor) {
         Solid.web.get(url).then(function(g) {
             // set url
             bin.url = url;
@@ -46,7 +46,7 @@ Pastebin = (function () {
                 bin.body = body.value;
             }
 
-            if (edit) {
+            if (showEditor) {
                 document.getElementById('edit-title').value = bin.title;
                 document.getElementById('edit-body').innerHTML = bin.body;
                 document.getElementById('submit').setAttribute('onclick', 'Pastebin.update()');
