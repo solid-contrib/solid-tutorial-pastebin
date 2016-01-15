@@ -21,17 +21,21 @@ Pastebin = (function () {
     var defaultContainer = '';
 
     function init() {
+        document.getElementById('edit').classList.add('hidden');
+        document.getElementById('view').classList.add('hidden');
+
         if (queryVals['view'] && queryVals['view'].length > 0) {
-            loadBin(queryVals['view']);
+            load(queryVals['view']);
         } else if (queryVals['edit'] && queryVals['edit'].length > 0) {
-            loadBin(queryVals['edit'], true);
+            load(queryVals['edit'], true);
         } else {
+            console.log('showing');
             document.getElementById('submit').setAttribute('onclick', 'Pastebin.publish()');
             document.getElementById('edit').classList.remove('hidden');
         }
     }
 
-    function loadBin (url, showEditor) {
+    function load (url, showEditor) {
         Solid.web.get(url).then(function(g) {
             // set url
             bin.url = url;
@@ -55,7 +59,6 @@ Pastebin = (function () {
                 document.getElementById('view-title').innerHTML = bin.title;
                 document.getElementById('view-body').innerHTML = bin.body;
                 document.getElementById('view').classList.remove('hidden');
-                document.getElementById('edit').classList.add('hidden');
             }
         }).catch(function(err) {
             // do something with the error
