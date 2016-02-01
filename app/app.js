@@ -1,5 +1,6 @@
-var Pastebin = Pastebin || {};
+var Solid = require('solid.js')
 
+var Pastebin = Pastebin || {};
 Pastebin = (function () {
     'use strict';
 
