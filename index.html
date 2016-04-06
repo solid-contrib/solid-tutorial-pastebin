@@ -1,22 +1,24 @@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
     <title>Solid Pastebin</title>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="shortcut icon" type="img/png" href="favicon.png">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="img/png" href="favicon.png" />
+    <script src="https://solid.github.io/releases/rdflib.js/rdflib-0.6.0.min.js"></script>
+    <script src="https://solid.github.io/releases/solid.js/solid-0.14.1.min.js"></script>
 </head>
 
 <body>
-    <div class="content center-text" id="view" class="hidden">
+    <div class="content center-text hidden" id="view">
         <h1 id="view-title"></h1>
         <br>
         <div id="view-body"></div>
     </div>
 
-    <div class="content center-text" id="edit" class="hidden">
+    <div class="content center-text hidden" id="edit">
         <input type="text" id="edit-title" class="block" placeholder="Title...">
         <br>
         <textarea id="edit-body" class="block" placeholder="Paste text here..."></textarea>
@@ -28,8 +30,6 @@
         <div class="center-text"><a href="https://github.com/solid/solid-tutorial-pastebin/" target="_blank">GitHub Page</a> | <a href="https://github.com/solid/solid-tutorial-pastebin/issues" target="_blank">GitHub Issues</a></div>
     </footer>
 
-    <script src="js/rdflib.min.js"></script>
-    <script src="https://solid.github.io/solid.js/dist/solid.js"></script>
     <script src="app/app.js"></script>
 </body>
 </html>
