@@ -9,6 +9,7 @@ Example application used in the
 **Step 1:** Have a container URL ready, where you'll be writing the
 pastebins. (Either create an account on a Solid server, or use the URL provided
 by your tutorial instructor.) This will look something like:
+
 `https://username.databox.me/Public/bins/`
 
 **Step 2:** Locate the following line, near the top of
@@ -18,6 +19,6 @@ by your tutorial instructor.) This will look something like:
    var defaultContainer = '';
 ```
 
-Change the empty string to the URL of teh container you want to use.
+Change the empty string to the URL of the container you want to use.
 
 **Step 3:** Open `index.html` in your web browser.
