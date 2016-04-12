@@ -6,7 +6,7 @@ var Pastebin = Pastebin || {};
 Pastebin = (function () {
     // Default publish location
     // ATTENTION: this variable must be set for the app to create new bins
-    var defaultContainer = '';
+    var defaultContainer = 'https://deiu.databox2.com/bin';
 
     // Bin structure
     var bin = {
@@ -18,6 +18,11 @@ Pastebin = (function () {
     function init() {
         document.getElementById('edit').classList.add('hidden');
         document.getElementById('view').classList.add('hidden');
+
+        if (defaultContainer.lastIndexOf('/') != defaultContainer.length - 1) {
+            defaultContainer += '/';
+        }
+        console.log(defaultContainer)
 
         if (queryVals['view'] && queryVals['view'].length > 0) {
             load(queryVals['view']);
@@ -77,7 +82,14 @@ Pastebin = (function () {
 
         solid.web.post(defaultContainer, data).then(function(meta) {
             // view
-            window.location.search = "?view="+encodeURIComponent(meta.url);
+            var url = meta.url;
+            if (url && url.slice(0,4) != 'http') {
+                if (url.indexOf('/') === 0) {
+                    url = url.slice(1, url.length);
+                }
+                url = defaultContainer + url.slice(url.lastIndexOf('/') + 1, url.length);
+            }
+            window.location.search = "?view="+encodeURIComponent(url);
         }).catch(function(err) {
             // do something with the error
             console.log(err);
