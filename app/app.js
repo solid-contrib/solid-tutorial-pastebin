@@ -6,7 +6,7 @@ var Pastebin = Pastebin || {};
 Pastebin = (function () {
     // Default publish location
     // ATTENTION: this variable must be set for the app to create new bins
-    var defaultContainer = 'https://deiu.databox2.com/bin';
+    var defaultContainer = '';
 
     // Bin structure
     var bin = {
