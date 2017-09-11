@@ -1,5 +1,5 @@
 'use strict';
-var solid = require('solid');
+var solid = SolidClient;
 var vocab = solid.vocab;
 
 var Pastebin = Pastebin || {};
